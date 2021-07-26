@@ -1,0 +1,38 @@
+{
+  "name": "programming",
+  "version": "1.0.0",
+  "main": "index.js",
+  "productName": "My Books",
+  "scripts": {
+    "start": "electron .",
+    "build-installer": "electron-builder"
+  },
+  "build": {
+    "appId": "com.consolelogg.mybooks",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "src/images/favicon.ico"
+    },
+    "nsis": {
+      "installerIcon": "src/images/favicon.ico",
+      "uninstallerIcon": "src/images/favicon.ico",
+      "uninstallDisplayName": "My Books",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "keywords": [],
+  "author": "Console.Logg",
+  "license": "ISC",
+  "files": ["./src/save/save.json"],
+  "devDependencies": {
+    "electron": "^13.1.6",
+    "electron-builder": "^22.11.7"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "description": "Ordene Seus Livros"
+}

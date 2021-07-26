@@ -1,0 +1,218 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+::selection 
+{
+    background: purple;
+    color: white;
+}
+
+body
+{
+    background: url("../images/backgroundWhite.jpg");
+    color: black;
+    font-family: fantasy;
+}
+
+h1
+{
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+.conteudo
+{
+    align-items: center;
+    padding: 30px 0;
+    height: 500px;
+    display: flex;
+    align-items: unset;
+    justify-content: center;
+}
+
+.livros
+{
+    height: 100%;
+    width: 80%;
+    position: relative;
+    border: 0.5px solid darkgrey;
+    overflow: auto;
+}
+
+.filtrar
+{
+    padding: 30px;
+    padding-left: 10px;
+    width: max-content;
+    justify-content: center;
+}
+
+.form-group
+{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.form-group label
+{
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.radio
+{
+    cursor: pointer;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    outline: none;
+    border: 2px solid blue;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radio::before
+{
+    content: '';
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    background: blue;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 400ms ease-in-out;
+}
+
+.radio:checked::before
+{
+    opacity: 1;
+}
+
+.radio:focus
+{
+    box-shadow: 0 0 5px black;
+}
+
+#button-filtrar
+{
+    cursor: pointer;
+    background: none;
+    border: 1px solid black;
+    width: 70px;
+    height: 25px;
+    border-radius: 10%;
+    font-size: 15spx;
+    color: black;
+    justify-content: center;
+    line-height: 25px;
+}
+
+#button-filtrar:hover
+{
+    border: none;
+    background: blue;
+    color: white;
+}
+
+.buttons
+{
+    display: flex;
+    margin: 20px 0;
+}
+
+#buttonAdd
+{
+    color: white;
+    background-color: black;
+    width: 100px;
+    height: 30px;
+    margin-left: -15px;
+    justify-content: center;
+    line-height: 30px;
+    border-radius: 10px;
+    border: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+}
+
+#buttonAdd:hover
+{
+    color: green;
+}
+
+table
+{
+    border-collapse: separate;
+    text-align: center; 
+    width: 100%;
+}
+
+td
+{
+    border: 1px solid black;
+    height: 35px;
+}   
+
+thead
+{
+    font-size: 20px;
+}
+
+.nameTable
+{
+    width: 45%;
+    cursor: pointer;
+}
+
+.authorTable
+{
+    width: 30%;
+}
+
+.pageTable
+{
+    width: 15%;
+}
+
+.readTable
+{
+    width: 5%;
+}
+
+input[type="checkbox"]
+{
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.nameTable::selection
+{
+    background: blue;
+    color: white;
+}
+
+.order::selection
+{
+    background: none;
+    color: black;
+}
+
+.order:hover
+{
+    cursor: pointer;
+    background: rgba(250, 125, 114, 0.2);
+}
+
+.order:active
+{
+    color: purple;
+}

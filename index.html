@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./src/styles/style.css">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title>My Books &#128218;</title>
+    </head>
+
+    <body>  
+        <h1>My Books</h1>
+        <div class="conteudo">
+
+            <div class="filtrar">
+    
+                <div class="form-group">
+                    <input class="radio" type="radio" name="filtro" id="todos">
+                    <label for="todos">Todos</label>
+                </div>
+                <div class="form-group">
+                    <input class="radio" type="radio" name="filtro" id="lidos">
+                    <label for="lidos">Lidos</label>
+                </div>
+                <div class="form-group">
+                    <input class="radio" type="radio" name="filtro" id="naoLidos">
+                    <label for="naoLidos">Não Lidos</label>
+                </div>
+                <button class="buttons" onclick="selected()" id="button-filtrar">Filtrar</button>
+
+                <button class="buttons" id="buttonAdd" onclick="goLink('./src/pages/add.html')">Add Livro</button>
+
+
+            </div>
+
+            <div class="livros">
+                    <div class="infos">
+                        <table id="tableMain">
+
+                            <thead>
+                                <th class="order" onclick="orderPages(0)">Livro</th>
+                                <th>Autor(a)</th>
+                                <th class="order"onclick="orderPages(1)">Páginas</th>
+                                <th>Lido</th>
+                            </thead>
+
+                            <tbody id="bodyTable">
+                            </tbody>
+                        </table>
+                    </div>
+            </div>
+
+        </div>
+
+    </body>
+    <script src="./src/scripts/script.js"></script>
+    <script src="./src/scripts/homePage.js"></script>
+
+</html>

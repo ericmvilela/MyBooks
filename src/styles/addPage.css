@@ -1,0 +1,193 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background: url("../images/backgroundWhite.jpg");
+    color: black;
+    font-family: fantasy;
+}
+
+h1
+{
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+.conteudo
+{
+    font-size: 20px;
+    padding: 30px;
+    align-items: center;
+    text-align: center;
+}
+
+.form-group
+{
+    margin-right: auto;
+    margin-left: auto;
+    border: none;
+    display: block;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 50%;
+    text-align: center;
+    border-radius: 5px;
+    height: 25px;
+    font-size: 17px;
+}
+
+.form-group:focus
+{
+    outline-color: blue; 
+}
+
+input
+{
+    background-color: gray;
+    color: white;
+}
+
+input[type=number]
+{
+    line-height: 100%;
+    width: 10%;
+}
+
+#saveButton
+{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 80px;
+    height: 30px;
+    background: none;
+    border: 1px solid forestgreen;
+    cursor: pointer;
+    color: forestgreen;
+    font-size: 15px;
+    border-radius: 2px;
+}
+
+#saveButton:hover, #saveButton:focus
+{
+    background: forestgreen;
+    color: white;
+    outline: none;
+}
+
+#saveButton:active
+{
+    background: darkgreen;
+}
+
+span
+{
+    color: limegreen;
+    font-size: 0;
+}
+
+.buttons
+{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+#cancelButton
+{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 80px;
+    height: 30px;
+    background: none;
+    border: 1px solid red;
+    cursor: pointer;
+    color: red;
+    font-size: 15px;
+    border-radius: 2px;
+}
+
+#cancelButton:hover, #cancelButton:focus
+{
+    background: red;
+    color: white;
+    outline: none;
+}
+
+#cancelButton:active
+{
+    background: maroon;
+}
+
+input[type="checkbox"]
+{
+    appearance: none;
+    -webkit-appearance: none;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="checkbox"]:after
+{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00c";
+    font-size: 18px;
+    color: white;
+    display: none;
+}
+
+input[type="checkbox"]:hover
+{
+    background-color: slategray;
+}
+
+input[type="checkbox"]:checked
+{
+    background-color: mediumblue;
+}
+
+input[type="checkbox"]:checked::after
+{
+    display: block;
+}
+
+.salvarApagar
+{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: 0 250px;
+}
+
+#delButton
+{
+    border: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 80px;
+    height: 30px;
+    background: red;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    border-radius: 2px;    
+}
+
+#delButton:hover
+{
+    background: darkred;
+}
+
+#delButton:active
+{
+    background: maroon;
+}

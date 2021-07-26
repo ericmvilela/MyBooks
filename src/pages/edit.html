@@ -1,0 +1,35 @@
+<html>
+    <header>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" type="text/css" href="../styles/addPage.css">
+        <title>Editar Livro &#128218;</title>
+    </header>
+    <body>
+        <h1>My Books</h1>
+        <div class="conteudo">
+            <label for="bookName">Nome do livro</label>
+            <input class="form-group" type="text" id="bookName" required>
+
+            <label for="author">Autor</label>
+            <input class="form-group" type="text" id="author" required>
+
+            <label for="pages">Páginas</label>
+            <input class="form-group" type="number" id="pages" required>
+
+            <label for="lido">Lido</label>
+            <input class="form-group" type="checkbox" id="lido" required>
+            
+            <span id="saving">Salvando...</span><br>
+
+            <div class="salvarApagar">
+                <button class="buttons" id="saveButton" onclick="saveEdit()">Salvar</button>
+                <button class="buttons" id="delButton" onclick="saveDel()">Apagar</button>
+            </div>
+            <button class="buttons" id="cancelButton" onclick="goLink('../../index.html')">Cancelar</button>  
+
+        </div>
+    </body>
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/edit.js"></script>
+</html>
