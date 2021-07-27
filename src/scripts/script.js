@@ -45,13 +45,15 @@ function saveBook()
 
     const fs = require("fs")
 
-    if(fs.existsSync(__dirname + "/save.json") == false)
+    console.log(__dirname)
+    if(fs.existsSync("./save.json") == false)
     {
         console.log("Nao Existe")
         createJsonSave()
     }
 
-    fs.readFile(__dirname + "/save.json", 'utf-8', function(err, data) {
+
+    fs.readFile("./save.json", 'utf-8', function(err, data) {
         if (err) throw err
     
         var saveFile = JSON.parse(data)
@@ -64,7 +66,7 @@ function saveBook()
 
         console.log(saveFile)
 
-        fs.writeFile(__dirname + "/save.json", JSON.stringify(saveFile, null, 2), 'utf-8' ,function(err, result) {
+        fs.writeFile("./save.json", JSON.stringify(saveFile, null, 2), 'utf-8' ,function(err, result) {
             if(err) console.log('error', err);
         });
 
@@ -96,13 +98,13 @@ function createTable(filter, order="alphabetic")
 
     const fs = require("fs")
 
-    if(fs.existsSync(__dirname + "/save.json") == false)
+    if(fs.existsSync("./save.json") == false)
     {
         console.log("Nao Existe")
         createJsonSave()
     }
 
-    fs.readFile(__dirname + "/save.json", 'utf-8', function(err, data) {
+    fs.readFile("./save.json", 'utf-8', function(err, data) {
         if (err) throw err
 
         allBooks = JSON.parse(data)
@@ -229,7 +231,7 @@ function createJsonSave()
     }
 
     const fs = require("fs")
-    fs.writeFile(__dirname + "/save.json", JSON.stringify(emptySave, null, 2), 'utf-8' ,function(err, result) {
+    fs.writeFile("./save.json", JSON.stringify(emptySave, null, 2), 'utf-8' ,function(err, result) {
         if(err) console.log('error', err);
     });
 }

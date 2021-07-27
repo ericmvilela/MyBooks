@@ -14,7 +14,7 @@ function initial(idBook)
     lidoCheck = document.getElementById("lido")
 
     const fs = require("fs")
-    fs.readFile("./src/save/save.json", 'utf-8', function(err, data) {
+    fs.readFile("./save.json", 'utf-8', function(err, data) {
         if (err) throw err
     
         allBooks = JSON.parse(data)
@@ -59,7 +59,7 @@ function saveEdit()
 
 
     const fs = require("fs")
-    fs.readFile("./src/save/save.json", 'utf-8', function(err, data) {
+    fs.readFile("./save.json", 'utf-8', function(err, data) {
         if (err) throw err
     
         var saveFile = JSON.parse(data)
@@ -77,7 +77,7 @@ function saveEdit()
 
         console.log(saveFile)
 
-        fs.writeFile("./src/save/save.json", JSON.stringify(saveFile, null, 2), 'utf-8' ,function(err, result) {
+        fs.writeFile("./save.json", JSON.stringify(saveFile, null, 2), 'utf-8' ,function(err, result) {
             if(err) console.log('error', err);
         });
 
@@ -100,7 +100,7 @@ function saveDel()
 
 
     const fs = require("fs")
-    fs.readFile("./src/save/save.json", 'utf-8', function(err, data) {
+    fs.readFile("./save.json", 'utf-8', function(err, data) {
         if (err) throw err
     
         var saveFile = JSON.parse(data)
@@ -114,7 +114,7 @@ function saveDel()
 
         console.log(saveFile)
 
-        fs.writeFile("./src/save/save.json", JSON.stringify(saveFile, null, 2), 'utf-8' ,function(err, result) {
+        fs.writeFile("./save.json", JSON.stringify(saveFile, null, 2), 'utf-8' ,function(err, result) {
             if(err) console.log('error', err);
         });
 

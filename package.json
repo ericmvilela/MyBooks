@@ -13,7 +13,8 @@
       "target": [
         "nsis"
       ],
-      "icon": "src/images/favicon.ico"
+      "icon": "src/images/favicon.ico",
+      "requestedExecutionLevel": "requireAdministrator"
     },
     "nsis": {
       "installerIcon": "src/images/favicon.ico",
@@ -26,7 +27,6 @@
   "keywords": [],
   "author": "Console.Logg",
   "license": "ISC",
-  "files": ["./src/save/save.json"],
   "devDependencies": {
     "electron": "^13.1.6",
     "electron-builder": "^22.11.7"
